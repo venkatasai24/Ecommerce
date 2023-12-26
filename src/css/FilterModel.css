@@ -1,0 +1,81 @@
+/* FilterModal.css */
+
+.filter-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+}
+
+.filter-modal {
+  color: white;
+  background-color: steelblue;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  width: min(90vw, 600px);
+  height: 70vh;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  box-sizing: border-box; /* Ensure that border is included in width and height */
+  position: relative;
+}
+
+.filter-modal::-webkit-scrollbar {
+  width: 8px;
+}
+
+.filter-modal::-webkit-scrollbar-thumb {
+  background-color: white;
+  border-radius: 8px;
+}
+
+.filter-modal h2 {
+  margin: 20px;
+  text-align: center;
+}
+
+.filter-section {
+  margin-bottom: 20px;
+}
+
+.filter-section h3 {
+  margin-bottom: 10px;
+}
+
+.filter-section input,
+label {
+  margin: 8px;
+}
+
+.filter-buttons {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.filter-buttons button {
+  border: none;
+  color: white;
+  background-color: steelblue;
+}
+
+.price-range-icons {
+  margin: 0px 10px;
+}
+
+.price-span {
+  margin: 5px;
+}
+
+.close-filter {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 24px;
+}

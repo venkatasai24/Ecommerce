@@ -1,0 +1,101 @@
+.profile {
+  display: flex;
+  justify-content: space-evenly;
+  margin: 50px;
+}
+
+.profile-details {
+  display: flex;
+  border-radius: 10px;
+  margin: 20px;
+  position: relative;
+  height: fit-content;
+}
+
+.profile-details form {
+  display: flex;
+  flex-direction: column;
+  margin: 20px;
+}
+
+.profile-details h2 {
+  padding: 10px;
+}
+
+.profile-details label {
+  margin: 10px 0px;
+}
+
+.PhoneInputCountrySelect {
+  height: 0;
+}
+
+.profile-details textarea,
+.profile-details input,
+.profile-details button {
+  margin: 5px 0px;
+  outline: none;
+  background-color: lightcyan;
+  border: none;
+  padding: 10px;
+}
+
+.profile-details button {
+  background-color: steelblue;
+  color: white;
+  padding: 10px;
+  margin-top: 20px;
+  cursor: pointer;
+  border: none;
+  width: fit-content;
+  transition: all 0.3s ease;
+}
+
+.profile-details button:hover {
+  transform: translateY(-5px);
+}
+
+.order-item {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid lightgrey;
+  border-radius: 0;
+}
+
+.order-details {
+  display: flex;
+  flex-direction: column;
+  margin: 20px;
+}
+
+.profile-icon {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  font-size: 24px;
+  color: steelblue;
+}
+
+.order-link {
+  font-size: 24px;
+  color: steelblue;
+  text-decoration: none;
+  margin: 10px 20px;
+  transition: all 0.3s ease;
+}
+
+.order-item:hover {
+  border: 1px solid steelblue;
+}
+
+.user-orders {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+@media screen and (max-width: 768px) {
+  .profile {
+    flex-wrap: wrap;
+  }
+}

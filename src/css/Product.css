@@ -1,0 +1,133 @@
+.product-container {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  position: relative;
+}
+
+@media screen and (min-width: 768px) {
+  .product-container {
+    flex-wrap: nowrap; /* Prevent wrapping on larger screens */
+  }
+}
+
+.go-back-button {
+  height: 30px;
+  width: 30px;
+  font-size: 24px;
+  align-self: self-start;
+  border: 1px solid white;
+  transition: transform 0.3s ease;
+  background-color: white;
+  margin: 5px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.missing {
+  position: relative;
+  padding: 20px;
+  margin: 20px;
+}
+
+.go-back-button:hover {
+  transform: translateX(-5px);
+}
+
+.product-image {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100vw;
+  justify-content: space-around;
+}
+
+.product-image img {
+  width: 400px;
+  height: 400px;
+  object-fit: contain;
+  margin: 40px;
+  transition: all 0.5s ease;
+}
+
+@media screen and (max-width: 768px) {
+  .product-image img {
+    width: 250px;
+    height: 250px;
+  }
+}
+
+.product-image img:hover {
+  transform: scale(1.05);
+}
+
+.product-details {
+  margin: 40px;
+}
+
+.product-details h1 {
+  font-size: 30px;
+  margin: 10px;
+}
+
+.product-details p {
+  font-size: 20px;
+  margin: 10px;
+}
+
+.cart-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.cart-container span {
+  position: absolute;
+  font-size: 20px;
+  color: lightcoral;
+}
+
+.cart-text {
+  font-size: 12px;
+}
+
+.cart-icon {
+  cursor: pointer;
+  margin: 20px;
+  font-size: 24px;
+}
+
+.cart-count {
+  font-size: 14px;
+  vertical-align: super;
+  margin-top: -5px;
+  cursor: pointer;
+}
+
+.cart-button {
+  margin: 10px;
+  width: 100px;
+  height: 40px;
+  color: white;
+  border: none;
+  background-color: steelblue;
+  transition: transform 0.3s ease;
+}
+
+.cart-button:hover {
+  transform: translateY(-5px);
+}
+
+.recommended-products {
+  margin: 40px 20px;
+  color: steelblue;
+  font-size: 1.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.recommended-products h2 {
+  margin: 20px 40px;
+}

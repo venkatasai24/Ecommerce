@@ -1,0 +1,97 @@
+.login-container {
+  max-width: min(90vw, 400px);
+  margin: 50px auto;
+  padding: 20px;
+  border: 1px solid steelblue;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.login-container form {
+  display: flex;
+  flex-direction: column;
+}
+
+.login-container label {
+  margin-bottom: 08px;
+}
+
+.login-container input,
+textarea {
+  padding: 10px;
+  margin-bottom: 16px;
+  background-color: lightcyan;
+  border-radius: 4px;
+  outline: none;
+  border: none;
+}
+
+.login-container button {
+  border: none;
+  height: 40px;
+  width: 100px;
+  background-color: steelblue;
+  color: white;
+  transition: all 0.3s ease;
+}
+
+.login-container button:hover {
+  background-color: white;
+  color: steelblue;
+  border: 1px solid transparent;
+  border-image: linear-gradient(to right, steelblue, red);
+  border-image-slice: 1;
+}
+
+.login-container p {
+  margin-top: 12px;
+}
+
+.login-container a {
+  color: steelblue;
+  text-decoration: none;
+  font-weight: bold;
+  margin: 10px 0px;
+}
+
+.login-container a:hover {
+  text-decoration: underline;
+}
+
+.loading-form-login {
+  width: 100%;
+}
+
+.loading-spinner-form-login {
+  margin: 0 auto;
+  width: 20px;
+  height: 20px;
+  align-self: center;
+}
+
+.error {
+  color: red;
+  background-color: #ffcccc;
+  border: 1px solid red;
+  padding: 10px;
+  border-radius: 4px;
+  margin: 20px 0px;
+}
+
+.loading-button {
+  background-color: white !important;
+}
+
+.forgot-password:hover {
+  color: steelblue;
+  cursor: pointer;
+}
+
+.success {
+  color: #155724;
+  background-color: #d4edda;
+  border: 1px solid #c3e6cb;
+  padding: 10px;
+  border-radius: 4px;
+  margin: 20px 0px;
+}

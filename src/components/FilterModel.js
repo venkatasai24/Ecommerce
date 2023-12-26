@@ -1,8 +1,4 @@
 // FilterModel.jsx
-
-import { makeStyles } from "@material-ui/core/styles";
-import Slider from "@material-ui/core/Slider";
-import { styled } from "@material-ui/core/styles";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faIndianRupeeSign,
@@ -10,19 +6,19 @@ import {
   faRemove,
 } from "@fortawesome/free-solid-svg-icons";
 import "../css/FilterModel.css";
+import Slider from "@mui/material/Slider";
+import { styled } from "@mui/system";
 
-const SteelBlueSlider = styled(Slider)({
+const CustomSlider = styled(Slider)({
   color: "white",
+  "& .MuiSlider-thumb": {
+    backgroundColor: "white",
+  },
   "& .MuiSlider-valueLabel": {
-    color: "steelblue",
+    color: "white",
+    backgroundColor: "steelblue",
   },
 });
-
-const useStyles = makeStyles((theme) => ({
-  slider: {
-    marginTop: theme.spacing(2),
-  },
-}));
 
 function FilterModel({
   onClose,
@@ -32,8 +28,6 @@ function FilterModel({
   priceRange,
   setPriceRange,
 }) {
-  const classes = useStyles();
-
   const handleCategoryChange = (category) => {
     setSelectedCategories((prevCategories) => {
       if (prevCategories.includes(category)) {
@@ -83,21 +77,19 @@ function FilterModel({
         <div className="filter-section">
           <h3>Price Range</h3>
           <div className="price-range-icons">
-            <SteelBlueSlider
-              className={classes.slider}
+            <CustomSlider
               value={priceRange}
               onChange={handlePriceRangeChange}
               valueLabelDisplay="auto"
-              aria-labelledby="range-slider"
+              valueLabelFormat={(value) => (
+                <span>
+                  <FontAwesomeIcon icon={faIndianRupeeSign} />
+                  {value}
+                </span>
+              )}
               min={0}
               max={175000}
-              color="primary"
             />
-            <FontAwesomeIcon icon={faIndianRupeeSign} />
-            <span className="price-span">{priceRange[0]}</span>
-            <span className="price-span">-</span>
-            <FontAwesomeIcon icon={faIndianRupeeSign} />
-            <span className="price-span">{priceRange[1]}</span>
           </div>
         </div>
         <div className="filter-section">

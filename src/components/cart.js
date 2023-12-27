@@ -93,62 +93,64 @@ function Cart({ isCartOpen, cartItems, toggleCart, setCartItems }) {
 
   return (
     <>
-      {isCartOpen && (
-        <div className="cart-sidebar" style={cartStyles}>
-          <FontAwesomeIcon
-            icon={faTimes}
-            className="cart-close-icon"
-            onClick={toggleCart}
-          />
-          <h3>Your Cart</h3>
-          {cartItems &&
-            cartItems.length > 0 &&
-            cartItems.map((item) => (
-              <div className="cart-item" key={item.id}>
-                <FontAwesomeIcon
-                  icon={faTimes}
-                  className="remove-item-icon"
-                  onClick={() => handleRemoveItem(item.id)}
-                />
-                <img
-                  src={item.image}
-                  alt={item.title}
-                  className="cart-item-image"
-                  onClick={() => navigate(`/product/${item.id}`)}
-                />
-                <div className="cart-item-details">
-                  <p className="cart-item-title">{item.title}</p>
-                  <p className="cart-item-price">₹ {item.price}</p>
-                  <div className="quantity-controls">
-                    <button onClick={() => handleDecrementQuantity(item.id)}>
-                      -
-                    </button>
-                    <span>{item.quantity}</span>
-                    <button onClick={() => handleIncrementQuantity(item.id)}>
-                      +
-                    </button>
+      <div data-aos="fade-in">
+        {isCartOpen && (
+          <div className="cart-sidebar" style={cartStyles}>
+            <FontAwesomeIcon
+              icon={faTimes}
+              className="cart-close-icon"
+              onClick={toggleCart}
+            />
+            <h3>Your Cart</h3>
+            {cartItems &&
+              cartItems.length > 0 &&
+              cartItems.map((item) => (
+                <div className="cart-item" key={item.id}>
+                  <FontAwesomeIcon
+                    icon={faTimes}
+                    className="remove-item-icon"
+                    onClick={() => handleRemoveItem(item.id)}
+                  />
+                  <img
+                    src={item.image}
+                    alt={item.title}
+                    className="cart-item-image"
+                    onClick={() => navigate(`/product/${item.id}`)}
+                  />
+                  <div className="cart-item-details">
+                    <p className="cart-item-title">{item.title}</p>
+                    <p className="cart-item-price">₹ {item.price}</p>
+                    <div className="quantity-controls">
+                      <button onClick={() => handleDecrementQuantity(item.id)}>
+                        -
+                      </button>
+                      <span>{item.quantity}</span>
+                      <button onClick={() => handleIncrementQuantity(item.id)}>
+                        +
+                      </button>
+                    </div>
                   </div>
                 </div>
-              </div>
-            ))}
-          <div className="cart-total">
-            {cartItems && cartItems.length ? (
-              <>
-                <p>Total</p>
-                <p>₹ {calculateTotalPrice().toFixed(2)}</p>
-                <p
-                  className="payment-link"
-                  onClick={() => navigate("/checkout")}
-                >
-                  Checkout
-                </p>
-              </>
-            ) : (
-              <p>Cart is empty :(</p>
-            )}
+              ))}
+            <div className="cart-total">
+              {cartItems && cartItems.length ? (
+                <>
+                  <p>Total</p>
+                  <p>₹ {calculateTotalPrice().toFixed(2)}</p>
+                  <p
+                    className="payment-link"
+                    onClick={() => navigate("/checkout")}
+                  >
+                    Checkout
+                  </p>
+                </>
+              ) : (
+                <p>Cart is empty :(</p>
+              )}
+            </div>
           </div>
-        </div>
-      )}
+        )}
+      </div>
     </>
   );
 }

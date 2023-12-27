@@ -17,9 +17,23 @@ function Register() {
   const [address, setAddress] = useState("");
   const navigate = useNavigate();
 
+  const isPasswordValid = (password) =>
+    /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&*()_+{}[\]:;<>,.?~\\/-]).{6,}$/.test(
+      password
+    );
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     setSuccess("");
+
+    if (!isPasswordValid(pwd)) {
+      // Handle invalid password (you can set an error state, display a message, etc.)
+      setErr(
+        "Password must have a minimum length of 6, include one lowercase letter, one uppercase letter, one number, and one symbol."
+      );
+      return;
+    }
+
     if (!isValidPhoneNumber(phoneNumber)) {
       // Handle invalid phone number (you can set an error state, display a message, etc.)
       setErr("Invalid Phone Number");

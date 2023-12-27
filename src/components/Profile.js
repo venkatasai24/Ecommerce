@@ -193,7 +193,11 @@ function Profile() {
                     .slice()
                     .reverse()
                     .map((order) => (
-                      <a href={`/orders/${order._id}`} className="order-link">
+                      <a
+                        href={`/orders/${order._id}`}
+                        className="order-link"
+                        data-aos="flip-right"
+                      >
                         <div key={order._id} className="cart-item order-item">
                           <p className="cart-item-title">
                             OrderId :{order._id}

@@ -31,7 +31,7 @@
 
 .cart-item-checkout {
   border: 1px solid lightgrey;
-  margin: 10px auto;
+  margin: 10px;
 }
 
 .cart-item-checkout:hover {

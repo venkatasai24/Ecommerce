@@ -158,7 +158,7 @@ function Product() {
               <FontAwesomeIcon color="steelblue" icon={faArrowLeft} />
             </button>
             <div className="product-image">
-              <img src={data?.thumbnail} alt={data.title} />
+              <img src={data?.thumbnail} alt={data.title} loading="lazy" />
             </div>
             <div className="product-details">
               {data.stock < 50 && (

@@ -71,7 +71,7 @@ function FilterModel({
   };
 
   return (
-    <div className="filter-modal-overlay">
+    <div className="filter-modal-overlay" data-aos="zoom-out">
       <div className="filter-modal">
         <h2>Filters</h2>
         <div className="filter-section">

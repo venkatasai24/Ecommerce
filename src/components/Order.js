@@ -126,6 +126,7 @@ function Order() {
                     alt={item.title}
                     className="cart-item-image checkout-image"
                     onClick={() => navigate(`/product/${item.id}`)}
+                    loading="lazy"
                   />
                 </div>
               ))}

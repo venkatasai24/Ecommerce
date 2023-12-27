@@ -12,6 +12,7 @@ import Search from "./components/search";
 import Checkout from "./components/Checkout";
 import Success from "./components/success";
 import Order from "./components/Order";
+import { SpeedInsights } from "@vercel/speed-insights/react";
 
 function App() {
   return (
@@ -32,6 +33,7 @@ function App() {
         </Route>
         <Route path="*" element={<Missing />} />
       </Route>
+      <SpeedInsights />
     </Routes>
   );
 }

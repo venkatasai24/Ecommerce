@@ -116,6 +116,7 @@ function Cart({ isCartOpen, cartItems, toggleCart, setCartItems }) {
                     alt={item.title}
                     className="cart-item-image"
                     onClick={() => navigate(`/product/${item.id}`)}
+                    loading="lazy"
                   />
                   <div className="cart-item-details">
                     <p className="cart-item-title">{item.title}</p>

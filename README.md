@@ -1,70 +1,106 @@
-# Getting Started with Create React App
+# E-Commerce Project
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Welcome to this full-stack e-commerce project! The platform is crafted using the powerful MERN stack (MongoDB, Express.js, React, Node.js). The goal is to deliver a seamless shopping experience with a range of features, ensuring a user-friendly and secure environment.
 
-## Available Scripts
+![Home](./src/assets/home.png)
 
-In the project directory, you can run:
+### Key Features
 
-### `npm start`
+- **User Authentication with JWT**: Securely register, log in, and manage your account with JSON Web Tokens.
+- **Search Bar**: Quickly locate your desired items using our search bar for a hassle-free shopping experience.
+- **Product Filtering**: Easily find products with our efficient product filtering system.
+- **Cart Items Display**: Browse and add products to your cart, with a real-time display of your selected items.
+- **Checkout Functionality**: Experience a smooth checkout process with a convenient "Proceed to Pay" option.
+- **Stripe Integration**: The platform features integrated Stripe for a secure and efficient payment gateway, ensuring your transactions are safe.
+- **Orders List**: Keep track of your order history and view details of your past purchases.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Usage
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- **Login or Register**: Existing users can log in to access the homepage. New users should register to create an account.
 
-### `npm test`
+- **Browse and Select Products**: Explore a variety of products on the homepage. Utilize product filtering options and the search bar for a quick selection.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- **Add to Cart**: Add your chosen products to the cart.
 
-### `npm run build`
+- **Checkout**: Proceed to checkout to review your selected items.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- **Payment with Stripe**: Complete the payment securely through our integrated Stripe payment gateway.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- **Order History**: After successful payment, view your order history in your profile.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Installation
 
-### `npm run eject`
+### Frontend
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+1. Clone the frontend repository:
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+   ```bash
+   git clone https://github.com/venkatasai24/Ecommerce.git
+   cd Ecommerce
+   ```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+2. Install dependencies:
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+   ```bash
+   npm install
+   ```
 
-## Learn More
+3. Configure the environment variables and server connection.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+4. Start the frontend server:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+   ```bash
+   npm start
+   ```
 
-### Code Splitting
+### Backend
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+1. Clone the backend repository:
 
-### Analyzing the Bundle Size
+   ```bash
+   git clone https://github.com/venkatasai24/Ecommerce-Backend.git
+   cd Ecommerce-Backend
+   ```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+2. Install dependencies:
 
-### Making a Progressive Web App
+   ```bash
+   npm install
+   ```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+3. Configure the environment variables, client connection and database connection.
 
-### Advanced Configuration
+4. Start the backend server:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+   ```bash
+   node index.js
+   ```
 
-### Deployment
+## Tech Stack
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+- **MongoDB**: Database for storing user and order information.
+- **Express.js**: Backend framework for building the API.
+- **React**: Frontend library for building the user interface.
+- **Node.js**: Server-side runtime for running the backend.
+- **JSON Web Tokens (JWT)**: Used for user authentication.
+- **Stripe**: Payment gateway for processing transactions.
 
-### `npm run build` fails to minify
+## Contributing
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Contributions are always welcome! If you'd like to contribute to the project, please follow these steps:
+
+1. Fork the repository.
+2. Create a new branch for your feature or fix:
+   ```bash
+   git checkout -b feature/your-feature
+   ```
+3. Commit your changes and push to your fork:
+   ```bash
+   git commit -m 'Add some feature'
+   git push origin feature/your-feature
+   ```
+4. Create a pull request on the original repository's `main` branch.
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE.md](./LICENSE.md) file for details.

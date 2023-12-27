@@ -16,25 +16,27 @@ import { SpeedInsights } from "@vercel/speed-insights/react";
 
 function App() {
   return (
-    <Routes>
-      <Route path="/" element={<Layout />}>
-        <Route path="login" element={<Login />} />
-        <Route path="register" element={<Register />} />
-        <Route element={<PersistLogin />}>
-          <Route element={<RequireAuth />}>
-            <Route index element={<HomePage />} />
-            <Route path="/search/:query" element={<Search />} />
-            <Route path="product/:id" element={<Product />} />
-            <Route path="/orders/:id" element={<Order />} />
-            <Route path="/profile" element={<Profile />} />
-            <Route path="/checkout" element={<Checkout />} />
-            <Route path="/success" element={<Success />} />
+    <>
+      <Routes>
+        <Route path="/" element={<Layout />}>
+          <Route path="login" element={<Login />} />
+          <Route path="register" element={<Register />} />
+          <Route element={<PersistLogin />}>
+            <Route element={<RequireAuth />}>
+              <Route index element={<HomePage />} />
+              <Route path="/search/:query" element={<Search />} />
+              <Route path="product/:id" element={<Product />} />
+              <Route path="/orders/:id" element={<Order />} />
+              <Route path="/profile" element={<Profile />} />
+              <Route path="/checkout" element={<Checkout />} />
+              <Route path="/success" element={<Success />} />
+            </Route>
           </Route>
+          <Route path="*" element={<Missing />} />
         </Route>
-        <Route path="*" element={<Missing />} />
-      </Route>
+      </Routes>
       <SpeedInsights />
-    </Routes>
+    </>
   );
 }
 
